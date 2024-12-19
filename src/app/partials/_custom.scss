@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+// Colori Principali
+// Blu Notte (#1E293B): Per sfondi principali o header. Trasmette professionalità e fiducia.
+// Verde Acqua (#22C55E): Per pulsanti, accenti e dettagli. Aggiunge freschezza e modernità.
+// Bianco (#FFFFFF): Per il testo o sfondi secondari per mantenere la leggibilità.
+
+// Colori Secondari
+// Grigio Chiaro (#F3F4F6): Per sfondi di sezioni alternative o bordi.
+// Rosa Corallo (#FB7185): Come accento opzionale per un tocco creativo (es. hover sui link o dettagli grafici).
+
+// Come Applicarli
+// Sfondo principale: Blu Notte.
+// Testo primario: Bianco.
+// Accenti (bottoni, link): Verde Acqua.
+// Sezioni secondarie: Grigio Chiaro.
+// Hover o pulsanti evidenti: Rosa Corallo.
+
+body {
+  font-family: "Inter", sans-serif;
+  @apply bg-nightblue text-white;
+}
+
+a {
+  @apply text-aqua no-underline hover:text-coral;
+}
+
+button {
+  @apply bg-aqua text-white font-bold py-2 px-4 rounded hover:bg-coral;
+}
