@@ -1,5 +1,6 @@
 import { ButtonsService } from './../services/buttons.service';
 import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -13,6 +14,9 @@ export class NavbarComponent implements AfterViewInit {
     private renderer: Renderer2,
     private buttonService: ButtonsService
   ) {}
+
+    // ICONE
+    faHome = faHome;
 
   ngAfterViewInit(): void {
     // Trova tutti i pulsanti con la classe 'jackbtn' e applica la logica
