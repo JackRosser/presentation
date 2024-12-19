@@ -22,9 +22,9 @@ body {
 }
 
 a {
-  @apply text-aqua no-underline hover:text-coral;
+  @apply text-watergreen no-underline hover:text-coralrose;
 }
 
 button {
-  @apply bg-aqua text-white font-bold py-2 px-4 rounded hover:bg-coral;
+  @apply bg-watergreen text-white font-bold py-2 px-4 rounded hover:bg-coralrose;
 }
