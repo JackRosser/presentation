@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  @apply text-watergreen no-underline hover:text-coralrose;
+  @apply text-watergreen no-underline hover:text-coralrose cursor-pointer;
 }
 
 button {
