@@ -1,7 +1,7 @@
 // CLASSI DEI PULSANTI
 
 .jackbtn {
-  @apply relative w-[200px] h-[50px] flex justify-center items-center gap-5 rounded-[20px] cursor-pointer bg-nightblue text-[1.5em] uppercase no-underline text-btnazure leading-[0.1em] delay-[0.5s] duration-[0.5s] overflow-hidden;
+  @apply relative w-[250px] h-[70px] flex justify-center items-center gap-5 rounded-[20px] cursor-pointer bg-nightblue text-[1.5em] uppercase no-underline text-btnazure leading-[0.1em] delay-[0.5s] duration-[0.5s] overflow-hidden;
 }
 
 .jackbtn:hover {
@@ -15,4 +15,10 @@
 
 .jackbtn:hover span {
   @apply scale-x-[1] origin-left transition-transform duration-[0.25s] ease-in-out;
+}
+
+// NAVBAR
+
+.navbar {
+  @apply flex justify-evenly bg-coralrose p-5 fixed w-full;
 }

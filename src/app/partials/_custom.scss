@@ -20,3 +20,7 @@ body {
   font-family: "Inter", sans-serif;
   @apply bg-nightblue text-white;
 }
+
+main {
+  @apply absolute w-full h-[calc(100vh-110px)] bottom-0 overflow-auto;
+}

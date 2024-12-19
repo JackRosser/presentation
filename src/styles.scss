@@ -1,6 +1,7 @@
 @use "./app/partials/keyframes";
 @use "./app/partials/classes";
 @use "./app/partials/custom";
+@use "./app/partials/scrollbar";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

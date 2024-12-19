@@ -1,0 +1,12 @@
+::-webkit-scrollbar {
+  width: 12px; /* Larghezza della scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Colore del tracciato della scrollbar */
+  border-radius: 10px; /* Arrotondamento del tracciato */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Colore del pollice quando si passa sopra con il mouse */
+}
