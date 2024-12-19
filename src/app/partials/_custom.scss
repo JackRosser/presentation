@@ -20,11 +20,3 @@ body {
   font-family: "Inter", sans-serif;
   @apply bg-nightblue text-white;
 }
-
-a {
-  @apply text-watergreen no-underline hover:text-coralrose cursor-pointer;
-}
-
-button {
-  @apply bg-watergreen text-white font-bold py-2 px-4 rounded hover:bg-coralrose;
-}

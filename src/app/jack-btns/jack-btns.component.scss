@@ -1,0 +1,16 @@
+.jackbtn {
+  @apply relative w-[240px] h-[80px] flex justify-center items-center cursor-pointer bg-btnbg text-[2em] uppercase no-underline text-btnazure leading-[0.1em] delay-[0.5s] duration-[0.5s] overflow-hidden;
+}
+
+.jackbtn:hover {
+  filter: drop-shadow(0 0 10px #7ef0ff) drop-shadow(0 0 30px #7ef0ff);
+  @apply text-btndark;
+}
+
+.jackbtn span {
+  @apply absolute left-0 w-full h-[2px] bg-btnazure z-[-1] scale-x-0 origin-right;
+}
+
+.jackbtn:hover span {
+  @apply scale-x-[1] origin-left transition-transform duration-[0.25s] ease-in-out;
+}
