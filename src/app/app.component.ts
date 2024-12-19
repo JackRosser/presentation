@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser'; // Importa il servizio Title
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'presentation';
+  title = 'Giacomo Rossettini Website';
+
+  constructor(private titleService: Title) {
+    this.titleService.setTitle(this.title);
+  }
 }
