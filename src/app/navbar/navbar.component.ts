@@ -1,9 +1,11 @@
 import { ButtonsService } from './../services/buttons.service';
 import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHome, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -21,10 +23,27 @@ export class NavbarComponent implements AfterViewInit {
   ) {}
 
     // ICONE
-    faHome = faHome;
-    faUser = faUser;
-    faProjectDiagram = faProjectDiagram;
-    faMailBulk = faMailBulk;
+    faHome: IconDefinition = faHome;
+    faUser: IconDefinition = faUser;
+    faProjectDiagram: IconDefinition = faProjectDiagram;
+    faMailBulk: IconDefinition = faMailBulk;
+    // ICONA HAMBURGER
+    // menu hidden
+    faBars: IconDefinition = faBars;
+    // menu mostrato
+    faAngleDoubleDown: IconDefinition = faAngleDoubleDown;
+
+    icon: IconDefinition = faBars
+    iconToggle: boolean = false;
+
+    showMenu(): void {
+      this.iconToggle = !this.iconToggle
+      if(this.iconToggle) {
+        this.icon = faAngleDoubleDown
+      } else {
+        this.icon = faBars
+      }
+    }
 
   ngAfterViewInit(): void {
     // Trova tutti i pulsanti con la classe 'jackbtn' e applica la logica

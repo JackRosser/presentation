@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar hidden lg:flex">
   <button class="jackbtn"><fa-icon [icon]="faHome"></fa-icon>Home</button>
   <button class="jackbtn"><fa-icon [icon]="faUser"></fa-icon>About</button>
   <button class="jackbtn">
@@ -6,5 +6,10 @@
   </button>
   <button class="jackbtn">
     <fa-icon [icon]="faMailBulk"></fa-icon>Contacts
+  </button>
+</nav>
+<nav class="navbarmobile">
+  <button (click)="showMenu()" class="navburger">
+    <fa-icon [icon]="icon"></fa-icon>
   </button>
 </nav>
