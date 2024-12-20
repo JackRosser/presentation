@@ -22,5 +22,5 @@ body {
 }
 
 main {
-  @apply absolute w-full h-[calc(100vh-110px)] bottom-0 overflow-auto;
+  @apply absolute w-full h-[calc(100vh-110px)] bottom-0 overflow-auto z-10;
 }
