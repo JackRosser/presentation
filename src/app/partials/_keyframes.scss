@@ -1,3 +1,4 @@
+// NAVBAR
 @keyframes mobileMenuAppear {
   from {
     transform: translateY(-1rem);
@@ -6,5 +7,44 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+//PRESENTAZIONE INIZIALE
+
+@keyframes presentation1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+@keyframes presentation3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+@keyframes presentation2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+@keyframes presentation4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
   }
 }
