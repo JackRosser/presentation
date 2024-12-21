@@ -1,3 +1,11 @@
 .presentation {
-  @apply grid grid-cols-1 border;
+  @apply grid grid-cols-1 lg:grid-cols-2 border w-full h-full;
+}
+
+.pbox {
+  @apply border p-5 flex justify-center items-center flex-col;
+}
+
+.imgpresentation {
+  @apply max-h-[780px];
 }

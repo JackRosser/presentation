@@ -1,5 +1,9 @@
+//INTER
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-
+//ROBOTO
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+//EXO 2
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 // Colori Principali
 // Blu Notte (#1E293B): Per sfondi principali o header. Trasmette professionalità e fiducia.
 // Verde Acqua (#22C55E): Per pulsanti, accenti e dettagli. Aggiunge freschezza e modernità.
@@ -17,10 +21,24 @@
 // Hover o pulsanti evidenti: Rosa Corallo.
 
 body {
-  font-family: "Inter", sans-serif;
+  // font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+  // font-family: "Exo 2", sans-serif;
   @apply bg-nightblue text-white;
 }
 
 main {
-  @apply absolute w-full h-[calc(100vh-72px)] lg:h-[calc(100vh-90px)] bottom-0 overflow-auto z-10  flex justify-center items-start p-5 border border-red-500;
+  @apply absolute w-[100vw] h-[calc(100vh-72px)] lg:h-[calc(100vh-90px)] bottom-0 overflow-auto z-10  flex justify-center items-start p-5;
+}
+
+.maintitle {
+  @apply uppercase;
+}
+
+.subtitle {
+  @apply capitalize;
+}
+
+.slogan {
+  @apply uppercase;
 }
