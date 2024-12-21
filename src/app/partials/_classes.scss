@@ -23,7 +23,7 @@
   @apply flex justify-evenly bg-coralrose p-5 fixed w-full z-50;
 }
 .navbarmobile {
-  @apply flex justify-end bg-coralrose h-[4.5rem] px-10 fixed w-full lg:hidden;
+  @apply flex justify-end bg-coralrose h-[4.5rem] px-10 fixed w-full lg:hidden z-50;
 }
 
 .navburger {
@@ -31,10 +31,10 @@
 }
 
 .menumobile {
-  @apply absolute flex flex-col top-[calc(4.5rem+1.25rem)] gap-5 w-full right-0 uppercase no-underline leading-[0.1em] text-[2rem];
+  @apply absolute flex flex-col top-[4.5rem] w-full right-0 uppercase no-underline leading-[0.1em] text-[2rem] backdrop-blur-sm  h-[calc(100vh-4.5rem)];
   animation: mobileMenuAppear 500ms;
 }
 
 .menuoptions {
-  @apply flex justify-end items-center gap-5  py-5 px-10 bg-coralrose cursor-pointer;
+  @apply flex justify-end items-center gap-5 py-5 px-10 cursor-pointer active:text-nightblue hover:text-nightblue even:bg-coralrose/80  odd:bg-rose-300/80;
 }

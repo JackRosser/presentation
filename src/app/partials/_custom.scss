@@ -22,5 +22,5 @@ body {
 }
 
 main {
-  @apply absolute w-full h-[calc(100vh-110px)] bottom-0 overflow-auto z-10;
+  @apply absolute w-full h-[calc(100vh-72px)] lg:h-[calc(100vh-90px)] bottom-0 overflow-auto z-10  flex justify-center items-start p-5 border border-red-500;
 }
