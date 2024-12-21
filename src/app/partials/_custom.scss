@@ -28,17 +28,5 @@ body {
 }
 
 main {
-  @apply absolute w-[100vw] h-[calc(100vh-72px)] lg:h-[calc(100vh-90px)] bottom-0 overflow-auto z-10  flex justify-center items-start p-5;
-}
-
-.maintitle {
-  @apply uppercase;
-}
-
-.subtitle {
-  @apply capitalize;
-}
-
-.slogan {
-  @apply uppercase;
+  @apply absolute w-[100vw] h-[calc(100vh-72px)]  lg:h-[calc(100vh-90px)] bottom-0 overflow-auto z-10  flex justify-center items-center p-5 tracking-widest;
 }

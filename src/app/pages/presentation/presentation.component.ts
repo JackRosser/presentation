@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faChevronDown, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-presentation',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './presentation.component.scss'
 })
 export class PresentationComponent {
+
+  faChevronDown:IconDefinition = faChevronDown;
 
 }

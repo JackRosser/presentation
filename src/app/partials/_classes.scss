@@ -1,7 +1,7 @@
 // CLASSI DEI PULSANTI
 
 .jackbtn {
-  @apply relative w-[200px] h-[50px] flex justify-center items-center gap-5 rounded-[20px] cursor-pointer bg-nightblue text-[1.2em] uppercase no-underline text-btnazure leading-[0.1em] delay-[0.5s] duration-[0.5s] overflow-hidden;
+  @apply relative w-[200px] h-[50px] flex justify-center items-center gap-5 rounded-[20px] cursor-pointer bg-nightblue text-[1.2em] uppercase no-underline text-white leading-[0.1em] delay-[0.5s] duration-[0.5s] overflow-hidden;
 }
 
 .jackbtn:hover {
@@ -27,7 +27,7 @@
 }
 
 .navburger {
-  @apply text-[2rem] hover:text-nightblue;
+  @apply text-[2rem];
 }
 
 .menumobile {
@@ -36,5 +36,5 @@
 }
 
 .menuoptions {
-  @apply flex justify-end items-center gap-5 py-5 px-10 cursor-pointer active:text-nightblue hover:text-nightblue even:bg-coralrose/80  odd:bg-rose-300/80;
+  @apply flex justify-end items-center gap-5 py-8 px-10 cursor-pointer active:text-nightblue hover:text-nightblue even:bg-coralrose/80  odd:bg-rose-300/80;
 }
