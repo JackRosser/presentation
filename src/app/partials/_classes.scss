@@ -20,7 +20,7 @@
 // NAVBAR
 
 .navbar {
-  @apply flex justify-evenly bg-coralrose p-5 fixed w-full z-50;
+  @apply flex justify-evenly items-center bg-coralrose p-5 fixed w-full z-50;
 }
 .navbarmobile {
   @apply flex justify-end bg-coralrose h-[4.5rem] px-10 fixed w-full lg:hidden z-50;

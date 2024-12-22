@@ -7,6 +7,10 @@
   <button class="jackbtn">
     <fa-icon [icon]="faMailBulk"></fa-icon>Contatti
   </button>
+  <div class="flex gap-5">
+    <img src="italian.png" alt="flag" class="flagimg" />
+    <img src="english.png" alt="flag" class="flagimg" />
+  </div>
 </nav>
 <nav class="navbarmobile">
   <button (click)="showMenu()" class="navburger">
@@ -19,5 +23,11 @@
       Progetti<fa-icon [icon]="faProjectDiagram"></fa-icon>
     </li>
     <li class="menuoptions">Contatti<fa-icon [icon]="faMailBulk"></fa-icon></li>
+    <li class="menuoptions">
+      <div class="flex gap-5">
+        <img src="italian.png" alt="flag" class="flagimg" />
+        <img src="english.png" alt="flag" class="flagimg" />
+      </div>
+    </li>
   </ul>
 </nav>
