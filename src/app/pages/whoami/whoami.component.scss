@@ -11,7 +11,7 @@ section {
 }
 
 .maincontainer {
-  @apply relative flex justify-center items-center flex-wrap gap-[60px];
+  @apply relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[60px];
 }
 
 .maincontainer .jackcard {
