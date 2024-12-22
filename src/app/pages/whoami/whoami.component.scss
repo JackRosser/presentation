@@ -2,27 +2,20 @@ section {
   @apply text-nightblue;
 }
 
+.important {
+  @apply font-bold underline;
+}
+
+.midimportant {
+  @apply font-semibold text-coralrose;
+}
+
 .maincontainer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 60px;
+  @apply relative flex justify-center items-center flex-wrap gap-[60px];
 }
 
 .maincontainer .jackcard {
-  position: relative;
-  width: 320px;
-  height: 250px;
-  background-color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-  transition: 0.5s;
+  @apply relative w-[320px] h-[250px] bg-white rounded-[20px] flex justify-center items-center flex-col cursor-pointer duration-[0.5s];
 }
 
 .maincontainer .jackcard:hover {
@@ -30,11 +23,8 @@ section {
 }
 
 .maincontainer .jackcard .imgBx {
-  position: absolute;
+  @apply absolute bg-nightblue rounded-[15px] duration-[0.5s] z-[1000];
   inset: 20px 20px 50px 20px;
-  background-color: #1e293b;
-  border-radius: 15px;
-  transition: 0.5s;
 }
 
 .maincontainer .jackcard:hover .imgBx {
@@ -44,17 +34,11 @@ section {
 
 .maincontainer.jackcard .imgBx::before {
   content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  left: -30px;
+  @apply absolute w-[20px] h-[20px] bg-transparent -left-[30px] opacity-0 duration-[0.5s];
   border-top-right-radius: 20px;
   transform: translateY(-100px);
-  opacity: 0;
   box-shadow: 5px -5px 0 4px #1e293b;
   pointer-events: none;
-  transition: 0.5s;
 }
 
 .maincontainer .jackcard:hover .imgBx::before {
@@ -64,17 +48,11 @@ section {
 
 .maincontainer.jackcard .imgBx::after {
   content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  right: -30px;
+  @apply absolute w-[20px] h-[20px] bg-transparent -right-[30px] opacity-0 duration-[0.5s];
   border-top-left-radius: 20px;
   transform: translateY(-100px);
-  opacity: 0;
   box-shadow: -5px -5px 0 4px #1e293b;
   pointer-events: none;
-  transition: 0.5s;
 }
 
 .maincontainer .jackcard:hover .imgBx::after {
@@ -83,11 +61,40 @@ section {
 }
 
 .maincontainer .jackcard .imgBx img {
+  @apply absolute top-0 left-0 w-full h-full object-cover rounded-[15px];
+}
+
+.maincontainer .jackcard p {
+  @apply text-[0.8rem];
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50px);
+  transition: 0.5s;
+}
+
+.maincontainer .jackcard:hover p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(40px);
+  line-height: 1.5rem;
+}
+
+.maincontainer .jackcard h2 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  bottom: 8px;
+  color: #1e293b;
+  transition: 0.5s;
+  @apply font-semibold;
+}
+
+.maincontainer .jackcard:hover h2 {
+  padding: 5px 25px;
+  background-color: greenyellow;
+  bottom: -25px;
   border-radius: 15px;
+  box-shadow: 0 0 0 10px #1e293b;
+  @apply font-bold;
 }
