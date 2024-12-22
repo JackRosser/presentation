@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PresentationComponent } from './pages/presentation/presentation.component';
 import { WhoamiComponent } from './pages/whoami/whoami.component';
+import { CitComponent } from './pages/cit/cit.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { WhoamiComponent } from './pages/whoami/whoami.component';
     NavbarComponent,
     PresentationComponent,
     WhoamiComponent,
+    CitComponent,
 
   ],
   imports: [
