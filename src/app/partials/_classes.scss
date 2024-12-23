@@ -38,3 +38,7 @@
 .menuoptions {
   @apply flex justify-end items-center gap-5 py-8 px-10 cursor-pointer active:text-nightblue hover:text-nightblue even:bg-coralrose/80  odd:bg-rose-300/80;
 }
+
+.sectionmargin {
+  @apply mt-[3rem] md:mt-[5rem] lg:mt-[10rem];
+}
