@@ -4,11 +4,13 @@
 
 /* La parte che si muove (il "pollice") */
 ::-webkit-scrollbar-thumb {
-  background-color: #fb7185;
-  border-radius: 10px;
+  // background-color: #fb7185;
+  // border-radius: 10px;
+  background: transparent;
 }
 
 /* Parte di sfondo della scrollbar */
 ::-webkit-scrollbar-track {
-  @apply bg-nightblue;
+  // @apply bg-nightblue;
+  background: transparent;
 }

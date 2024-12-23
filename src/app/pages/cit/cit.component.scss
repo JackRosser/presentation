@@ -1,8 +1,8 @@
 .citbox {
-  @apply relative cursor-default w-full overflow-hidden text-[0.8rem] lg:text-[1rem];
+  @apply relative cursor-default w-full overflow-hidden text-[0.8rem] lg:text-[1.5rem];
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0 cover 50%;
+  animation-range: entry 0 cover 55%;
 }
 
 h2 {
@@ -10,7 +10,7 @@ h2 {
 }
 
 .author {
-  @apply italic font-thin;
+  @apply italic font-thin mt-3;
 }
 
 @keyframes appear {
