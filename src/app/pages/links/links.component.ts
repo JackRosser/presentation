@@ -12,7 +12,7 @@ export class LinksComponent implements AfterViewInit{
   myNum:string = ""
 
   showNum():void {
-    this.whatsApp = "text-[1rem]"
+    this.whatsApp = "text-[0.5rem] lg:text-[1rem]"
     this.myNum = "3489272907"
   }
   hideNum():void {

@@ -1,29 +1,17 @@
 .sci {
-  position: relative;
-  display: flex;
-  gap: 30px;
+  @apply relative flex gap-3 md:gap-[30px];
 }
 
 .sci li a {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  background: white;
-  color: #333;
-  font-size: 4em;
-  text-decoration: none;
+  @apply relative flex justify-center items-center w-[100px] h-[100px] text-[2em] md:w-[160px] md:h-[160px] md:text-[2.5em] lg:w-[250px] lg:h-[250px] bg-white text-[#333] lg:text-[4em] no-underline rounded-full;
   transform-style: preserve-3d;
   transition: background 0.25s;
-  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+  box-shadow: 0 25px 35px rgba(255, 255, 255, 0.1);
 }
 
 .sci li a:hover {
   background: var(--clr);
-  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
   border: 5px solid var(--clr);
 }
 
