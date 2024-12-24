@@ -65,6 +65,10 @@ export class NavbarComponent implements AfterViewInit {
     this.languageSvc.setEnglish()
   }
 
+  home!:any;
+  who!:any;
+  contacts!:any;
+
   ngAfterViewInit(): void {
     // Applica effetti ai pulsanti con la classe 'jackbtn'
     const buttons = this.el.nativeElement.querySelectorAll('.jackbtn');
@@ -72,4 +76,13 @@ export class NavbarComponent implements AfterViewInit {
       this.buttonService.applyEffects(btn, this.renderer);
     });
   }
+
+  ngOnInit() {
+    this.languageSvc.language$.subscribe(current => {
+      this.home = current?.home
+      this.who = current?.who
+      this.contacts = current?.contacts
+    })
+  }
+
 }

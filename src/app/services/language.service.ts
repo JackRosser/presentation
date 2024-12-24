@@ -38,7 +38,7 @@ export class LanguageService {
   setEnglish(): void {
     const english: iLanguages = {
       home: 'home',
-      who: 'who am I',
+      who: 'about',
       contacts: 'contacts',
       trasformoidee: 'I transform your ideas into',
       esperienze: 'DIGITAL EXPERIENCES',

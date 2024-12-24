@@ -1,12 +1,12 @@
-<nav class="navbar hidden lg:flex">
+<nav *ngIf="home && contacts && who" class="navbar hidden lg:flex">
   <a (click)="scrollToSection('presentationSection')" class="jackbtn">
-    <fa-icon [icon]="faHome"></fa-icon>Home
+    <fa-icon [icon]="faHome"></fa-icon> {{ home }}
   </a>
   <a (click)="scrollToSection('whoAmISection')" class="jackbtn">
-    <fa-icon [icon]="faUser"></fa-icon>Chi sono
+    <fa-icon [icon]="faUser"></fa-icon>{{ who }}
   </a>
   <a (click)="scrollToSection('links')" class="jackbtn">
-    <fa-icon [icon]="faMailBulk"></fa-icon>Contatti
+    <fa-icon [icon]="faMailBulk"></fa-icon>{{ contacts }}
   </a>
   <div class="flex gap-5">
     <img (click)="setItalian()" src="italian.png" alt="flag" class="flagimg" />
@@ -20,13 +20,13 @@
   </button>
   <ul *ngIf="iconToggle" class="menumobile">
     <li class="menuoptions" (click)="scrollToSection('presentationSection')">
-      Home<fa-icon [icon]="faHome"></fa-icon>
+      {{ home }}<fa-icon [icon]="faHome"></fa-icon>
     </li>
     <li class="menuoptions" (click)="scrollToSection('whoAmISection')">
-      Chi sono<fa-icon [icon]="faUser"></fa-icon>
+      {{ who }}<fa-icon [icon]="faUser"></fa-icon>
     </li>
     <li class="menuoptions" (click)="scrollToSection('links')">
-      Contatti<fa-icon [icon]="faMailBulk"></fa-icon>
+      {{ contacts }}<fa-icon [icon]="faMailBulk"></fa-icon>
     </li>
     <li class="menuoptions">
       <div class="flex gap-5">
