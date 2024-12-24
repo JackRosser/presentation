@@ -1,14 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-cit',
   templateUrl: './cit.component.html',
   styleUrls: ['./cit.component.scss']
 })
-export class CitComponent  {
+export class CitComponent  implements OnInit{
 
-  position:number = 0;
 
+  constructor(private languageSvc:LanguageService) {}
+  slogan!:any
+
+  ngOnInit(): void {
+    this.languageSvc.language$.subscribe(list => {
+      this.slogan = list?.sloganOne
+    })
+  }
 
 
 }
