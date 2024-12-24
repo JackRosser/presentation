@@ -9,8 +9,8 @@
     <fa-icon [icon]="faMailBulk"></fa-icon>Contatti
   </a>
   <div class="flex gap-5">
-    <img src="italian.png" alt="flag" class="flagimg" />
-    <img src="english.png" alt="flag" class="flagimg" />
+    <img (click)="setItalian()" src="italian.png" alt="flag" class="flagimg" />
+    <img (click)="setEnglish()" src="english.png" alt="flag" class="flagimg" />
   </div>
 </nav>
 
@@ -30,8 +30,18 @@
     </li>
     <li class="menuoptions">
       <div class="flex gap-5">
-        <img src="italian.png" alt="flag" class="flagimg" />
-        <img src="english.png" alt="flag" class="flagimg" />
+        <img
+          (click)="setItalian()"
+          src="italian.png"
+          alt="flag"
+          class="flagimg"
+        />
+        <img
+          (click)="setEnglish()"
+          src="english.png"
+          alt="flag"
+          class="flagimg"
+        />
       </div>
     </li>
   </ul>

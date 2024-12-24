@@ -9,6 +9,7 @@ import {
   faAngleDoubleDown,
 } from '@fortawesome/free-solid-svg-icons';
 import { ButtonsService } from './../services/buttons.service';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,6 +17,8 @@ import { ButtonsService } from './../services/buttons.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements AfterViewInit {
+
+
   // Icone
   faHome: IconDefinition = faHome;
   faUser: IconDefinition = faUser;
@@ -32,7 +35,8 @@ export class NavbarComponent implements AfterViewInit {
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,
-    private buttonService: ButtonsService
+    private buttonService: ButtonsService,
+    private languageSvc: LanguageService
   ) {}
 
   // Mostra/nasconde menu mobile
@@ -51,6 +55,14 @@ export class NavbarComponent implements AfterViewInit {
         this.showMenu();
       }
     }
+  }
+
+  setItalian():void {
+    this.languageSvc.setItalian()
+  }
+
+  setEnglish():void {
+    this.languageSvc.setEnglish()
   }
 
   ngAfterViewInit(): void {
