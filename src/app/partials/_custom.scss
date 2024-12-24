@@ -28,6 +28,7 @@ body {
   font-family: "Poppins", sans-serif;
   // font-family: "Exo 2", sans-serif;
   @apply bg-nightblue text-white;
+  animation: mainappear 1s ease-in;
 }
 
 main {
