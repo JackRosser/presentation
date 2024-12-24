@@ -1,0 +1,77 @@
+// .sci {
+//   position: relative;
+//   display: flex;
+//   gap: 40px;
+// }
+
+// .sci li {
+//   list-style: none;
+// }
+
+// .sci li a {
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 250px;
+//   height: 250px;
+//   background-color: white;
+//   color: #333;
+//   font-size: 4em;
+//   text-decoration: none;
+//   border-radius: 10px;
+//   transform-style: preserve-3d;
+//   transition: all 0.25s;
+//   box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+// }
+
+// .sci li a:hover {
+//   background-color: var(--clr);
+//   box-shadow: 0 25px 35px rgba(0, 0, 0, 0.25);
+//   border: 5px solid var(--clr);
+//   transform: scale(1.2);
+//   color: white;
+// }
+
+// li:hover a i {
+//   transform: scale(1.5);
+//   transition: trasform 1s;
+// }
+
+.sci {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.sci li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background: white;
+  color: #333;
+  font-size: 4em;
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transition: background 0.25s;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+}
+
+.sci li a:hover {
+  background: var(--clr);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.25);
+  border: 5px solid var(--clr);
+}
+
+.sci li a i {
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.sci li a:hover i {
+  transform: scale(1.5) translateZ(50px);
+  color: white;
+}
