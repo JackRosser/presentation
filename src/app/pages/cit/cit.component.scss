@@ -12,14 +12,3 @@ h2 {
 .author {
   @apply italic font-thin mt-3;
 }
-
-@keyframes citappear {
-  from {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

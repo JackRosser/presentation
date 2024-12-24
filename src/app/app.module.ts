@@ -9,6 +9,7 @@ import { PresentationComponent } from './pages/presentation/presentation.compone
 import { WhoamiComponent } from './pages/whoami/whoami.component';
 import { CitComponent } from './pages/cit/cit.component';
 import { LinksComponent } from './pages/links/links.component';
+import { SecondcitComponent } from './pages/secondcit/secondcit.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LinksComponent } from './pages/links/links.component';
     WhoamiComponent,
     CitComponent,
     LinksComponent,
+    SecondcitComponent,
 
   ],
   imports: [

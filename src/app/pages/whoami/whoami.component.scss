@@ -16,6 +16,9 @@ section {
 
 .maincontainer .jackcard {
   @apply relative w-[320px] h-[250px] bg-white rounded-[20px] flex justify-center items-center flex-col cursor-pointer duration-[0.5s];
+  animation: cardappear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
 }
 
 .maincontainer .jackcard:hover {

@@ -7,6 +7,9 @@
   transform-style: preserve-3d;
   transition: background 0.25s;
   box-shadow: 0 25px 35px rgba(255, 255, 255, 0.1);
+  animation: cardappear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 15%;
 }
 
 .sci li a:hover {
