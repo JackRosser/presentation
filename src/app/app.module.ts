@@ -11,6 +11,12 @@ import { CitComponent } from './pages/cit/cit.component';
 import { LinksComponent } from './pages/links/links.component';
 import { SecondcitComponent } from './pages/secondcit/secondcit.component';
 import { LanguagesComponent } from './pages/languages/languages.component';
+import { Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'presentation', component: PresentationComponent },
+  // Altre rotte...
+];
 
 @NgModule({
   declarations: [

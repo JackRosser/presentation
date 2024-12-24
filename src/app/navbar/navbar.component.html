@@ -1,28 +1,33 @@
 <nav class="navbar hidden lg:flex">
-  <button class="jackbtn"><fa-icon [icon]="faHome"></fa-icon>Home</button>
-  <button class="jackbtn"><fa-icon [icon]="faUser"></fa-icon>Chi sono</button>
-  <button class="jackbtn">
-    <fa-icon [icon]="faProjectDiagram"></fa-icon>Progetti
-  </button>
-  <button class="jackbtn">
+  <a (click)="scrollToSection('presentationSection')" class="jackbtn">
+    <fa-icon [icon]="faHome"></fa-icon>Home
+  </a>
+  <a (click)="scrollToSection('whoAmISection')" class="jackbtn">
+    <fa-icon [icon]="faUser"></fa-icon>Chi sono
+  </a>
+  <a (click)="scrollToSection('links')" class="jackbtn">
     <fa-icon [icon]="faMailBulk"></fa-icon>Contatti
-  </button>
+  </a>
   <div class="flex gap-5">
     <img src="italian.png" alt="flag" class="flagimg" />
     <img src="english.png" alt="flag" class="flagimg" />
   </div>
 </nav>
+
 <nav class="navbarmobile">
   <button (click)="showMenu()" class="navburger">
     <fa-icon [icon]="icon"></fa-icon>
   </button>
   <ul *ngIf="iconToggle" class="menumobile">
-    <li class="menuoptions">Home<fa-icon [icon]="faHome"></fa-icon></li>
-    <li class="menuoptions">Chi sono<fa-icon [icon]="faUser"></fa-icon></li>
-    <li class="menuoptions">
-      Progetti<fa-icon [icon]="faProjectDiagram"></fa-icon>
+    <li class="menuoptions" (click)="scrollToSection('presentationSection')">
+      Home<fa-icon [icon]="faHome"></fa-icon>
     </li>
-    <li class="menuoptions">Contatti<fa-icon [icon]="faMailBulk"></fa-icon></li>
+    <li class="menuoptions" (click)="scrollToSection('whoAmISection')">
+      Chi sono<fa-icon [icon]="faUser"></fa-icon>
+    </li>
+    <li class="menuoptions" (click)="scrollToSection('links')">
+      Contatti<fa-icon [icon]="faMailBulk"></fa-icon>
+    </li>
     <li class="menuoptions">
       <div class="flex gap-5">
         <img src="italian.png" alt="flag" class="flagimg" />

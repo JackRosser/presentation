@@ -1,15 +1,14 @@
+import { Component, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHome,
+  faUser,
+  faProjectDiagram,
+  faMailBulk,
+  faBars,
+  faAngleDoubleDown,
+} from '@fortawesome/free-solid-svg-icons';
 import { ButtonsService } from './../services/buttons.service';
-import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
-import { faHome, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
-import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
-
-
-
-
 
 @Component({
   selector: 'app-navbar',
@@ -17,37 +16,45 @@ import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements AfterViewInit {
+  // Icone
+  faHome: IconDefinition = faHome;
+  faUser: IconDefinition = faUser;
+  faProjectDiagram: IconDefinition = faProjectDiagram;
+  faMailBulk: IconDefinition = faMailBulk;
+
+  // Icona Hamburger
+  faBars: IconDefinition = faBars;
+  faAngleDoubleDown: IconDefinition = faAngleDoubleDown;
+
+  icon: IconDefinition = this.faBars;
+  iconToggle: boolean = false;
+
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,
     private buttonService: ButtonsService
   ) {}
 
-    // ICONE
-    faHome: IconDefinition = faHome;
-    faUser: IconDefinition = faUser;
-    faProjectDiagram: IconDefinition = faProjectDiagram;
-    faMailBulk: IconDefinition = faMailBulk;
-    // ICONA HAMBURGER
-    // menu hidden
-    faBars: IconDefinition = faBars;
-    // menu mostrato
-    faAngleDoubleDown: IconDefinition = faAngleDoubleDown;
+  // Mostra/nasconde menu mobile
+  showMenu(): void {
+    this.iconToggle = !this.iconToggle;
+    this.icon = this.iconToggle ? this.faAngleDoubleDown : this.faBars;
+  }
 
-    icon: IconDefinition = faBars
-    iconToggle: boolean = false;
-
-    showMenu(): void {
-      this.iconToggle = !this.iconToggle
-      if(this.iconToggle) {
-        this.icon = faAngleDoubleDown
-      } else {
-        this.icon = faBars
+  // Scorri alla sezione specificata
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (this.iconToggle) {
+        // Chiude il menu mobile dopo il click
+        this.showMenu();
       }
     }
+  }
 
   ngAfterViewInit(): void {
-    // Trova tutti i pulsanti con la classe 'jackbtn' e applica la logica
+    // Applica effetti ai pulsanti con la classe 'jackbtn'
     const buttons = this.el.nativeElement.querySelectorAll('.jackbtn');
     buttons.forEach((btn: HTMLElement) => {
       this.buttonService.applyEffects(btn, this.renderer);
