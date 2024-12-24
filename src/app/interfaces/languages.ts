@@ -11,5 +11,9 @@ export interface iLanguages {
   obiettivo:string,
   scrivere:string,
   maunapassione:string,
-  ognigiorno:string
+  ognigiorno:string,
+  htmlOne:string,
+  htmlTwo:string,
+  htmlThree:string,
+  htmlFour:string
 }
