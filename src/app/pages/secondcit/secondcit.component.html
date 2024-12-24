@@ -1,23 +1,24 @@
-<section class="mt-[20rem] mb-[10rem] flex flex-col gap-3">
+<section
+  *ngIf="lineOne && lineTwo && lineThree"
+  class="mt-[20rem] mb-[10rem] flex flex-col gap-3"
+>
   <div class="citbox">
     <h2 class="flex flex-col gap-2">
-      <span class="text-[0.6rem] lg:text-[2rem]">
-        Scrivere codice che funzioni perfettamente non è solo un lavoro</span
-      >
+      <span class="text-[0.6rem] lg:text-[2rem]"> {{ lineOne }}</span>
     </h2>
   </div>
   <div class="passion">
     <h2 class="flex flex-col gap-3">
       <span class="text-left text-[1rem] lg:text-[2.5rem] italic"
-        >ma una passione che mi spinge a migliorarmi
+        >{{ lineTwo }}
       </span>
     </h2>
   </div>
   <div class="citboxtwo">
     <h2 class="flex flex-col gap-2">
-      <span class="text-[1.5rem] lg:text-[4rem] text-coralrose text-right"
-        >ogni giorno</span
-      >
+      <span class="text-[1.5rem] lg:text-[4rem] text-coralrose text-right">{{
+        lineThree
+      }}</span>
     </h2>
   </div>
 </section>
