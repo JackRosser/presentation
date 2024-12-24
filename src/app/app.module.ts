@@ -10,6 +10,7 @@ import { WhoamiComponent } from './pages/whoami/whoami.component';
 import { CitComponent } from './pages/cit/cit.component';
 import { LinksComponent } from './pages/links/links.component';
 import { SecondcitComponent } from './pages/secondcit/secondcit.component';
+import { LanguagesComponent } from './pages/languages/languages.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SecondcitComponent } from './pages/secondcit/secondcit.component';
     CitComponent,
     LinksComponent,
     SecondcitComponent,
+    LanguagesComponent,
 
   ],
   imports: [
