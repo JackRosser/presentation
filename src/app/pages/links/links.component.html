@@ -10,9 +10,14 @@
         <i class="bi bi-envelope"></i>
       </a>
     </li>
-    <li style="--clr: #d44638" id="whatsapp">
+    <li
+      style="--clr: #00a783"
+      id="whatsapp"
+      (mouseover)="showNum()"
+      (mouseleave)="hideNum()"
+    >
       <a href="#whatsapp" target="_blank">
-        <i class="bi bi-whatsapp"></i>
+        <i [class]="whatsApp">{{ myNum }}</i>
       </a>
     </li>
   </ul>

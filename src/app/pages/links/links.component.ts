@@ -7,6 +7,20 @@ import VanillaTilt from 'vanilla-tilt';
   styleUrl: './links.component.scss'
 })
 export class LinksComponent implements AfterViewInit{
+
+  whatsApp:string = "bi bi-whatsapp"
+  myNum:string = ""
+
+  showNum():void {
+    this.whatsApp = "text-[1rem]"
+    this.myNum = "3489272907"
+  }
+  hideNum():void {
+    this.whatsApp = "bi bi-whatsapp"
+    this.myNum = ""
+  }
+
+
   ngAfterViewInit(): void {
         const elements = Array.from(document.querySelectorAll('.sci li a')); // Converte NodeList in array
         VanillaTilt.init(elements as HTMLElement[], {
