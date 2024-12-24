@@ -40,7 +40,7 @@ export class LanguageService {
       home: 'home',
       who: 'about',
       contacts: 'contacts',
-      trasformoidee: 'I transform your ideas into',
+      trasformoidee: 'Transforming concepts into',
       esperienze: 'DIGITAL EXPERIENCES',
       sloganOne: '"It’s not enough to know; you also need to apply. It’s not enough to want; you also need to do."',
       sudime: 'About me',

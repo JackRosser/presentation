@@ -1,4 +1,4 @@
-<section class="presentation">
+<section *ngIf="stringOne && stringTwo" class="presentation">
   <div class="pbox">
     <img src="myImage.png" alt="giacomo rossettini" class="imgpresentation" />
   </div>
@@ -12,8 +12,8 @@
         <div class="presentationbox">
           <h1 class="maintitle">giacomo rossettini</h1>
           <h2 class="subtitle">web designer & developer</h2>
-          <h3>Trasformo le tue idee in</h3>
-          <p class="slogan">esperienze digitali</p>
+          <h3>{{ stringOne }}</h3>
+          <p class="slogan">{{ stringTwo }}</p>
         </div>
       </div>
     </div>
