@@ -1,11 +1,13 @@
 section {
-  display: flex;
-  align-items: center;
+  @apply flex flex-col gap-5 items-center lg:items-start justify-center text-[2.5em] md:text-[5em] mt-[20rem] mb-[10rem];
+  animation: sectionappear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
 }
 
 h2 {
   color: white;
-  font-size: 5em;
+
   font-weight: 600;
   padding: 0 100px;
 }
@@ -13,18 +15,8 @@ h2 {
 h2 span {
   position: relative;
   color: rgba(255, 255, 255, 0.1);
-  animation: displayText 9s infinite;
+  animation: displayText 21s infinite;
   animation-delay: calc(-3s * var(--i));
-}
-
-@keyframes displayText {
-  0% {
-    display: inline-block;
-  }
-  33.33%,
-  100% {
-    display: none;
-  }
 }
 
 h2 span::before {
@@ -33,21 +25,34 @@ h2 span::before {
   top: 0;
   left: 0;
   width: 100%;
-  color: #01fe87;
+  color: #7ef0ff;
   overflow: hidden;
-  border-right: 4px solid #01fe87;
-  filter: drop-shadow(0 0 5px #01fe87) drop-shadow(0 0 25px #01fe87);
+  border-right: 4px solid #7ef0ff;
+  filter: drop-shadow(0 0 5px #7ef0ff) drop-shadow(0 0 25px #7ef0ff);
   animation: bar 3s linear infinite;
+  animation-delay: calc(-3s * var(--i));
 }
 
-@keyframes bar {
-  0%,
-  10%,
-  100% {
-    width: 0;
-  }
-  70%,
-  90% {
-    width: 100%;
-  }
+h2 .back::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fb7185;
+  overflow: hidden;
+  border-right: 4px solid #fb7185;
+  filter: drop-shadow(0 0 5px #fb7185) drop-shadow(0 0 25px #fb7185);
+  animation: bar 3s linear infinite;
+  animation-delay: calc(-3s * var(--i));
+}
+
+h2:nth-of-type(2) span {
+  animation: displayTextBack 9s infinite;
+  animation-delay: calc(-3s * var(--i));
+}
+
+h2:nth-of-type(2) span::before {
+  animation: barBack 3s linear infinite;
+  animation-delay: calc(-3s * var(--i));
 }

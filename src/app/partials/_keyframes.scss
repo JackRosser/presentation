@@ -84,7 +84,7 @@
     opacity: 1;
   }
   to {
-    opacity: 1;
+    opacity: 0;
     transform: translateX(-30rem);
   }
 }
@@ -101,3 +101,60 @@
 }
 
 // TESTO LINGUAGGI
+
+@keyframes sectionappear {
+  from {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes displayText {
+  0%,
+  14.28% {
+    display: inline-block;
+  }
+  14.29%,
+  100% {
+    display: none;
+  }
+}
+
+@keyframes bar {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+@keyframes displayTextBack {
+  0%,
+  33.33% {
+    display: inline-block;
+  }
+  33.34%,
+  100% {
+    display: none;
+  }
+}
+
+@keyframes barBack {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
